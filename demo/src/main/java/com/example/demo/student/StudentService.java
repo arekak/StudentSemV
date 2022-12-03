@@ -82,9 +82,4 @@ public class StudentService {
         dbStudent.setEmail(student.getEmail());
         dbStudent.setDob(student.getDob());
     }
-
-    public Student getStudent(Long studentId) {
-        Student student = studentRepository.findById(studentId).orElseThrow(() -> new IllegalStateException("Student with id " + studentId + " does not exists"));
-        return  student;
-    }
 }
